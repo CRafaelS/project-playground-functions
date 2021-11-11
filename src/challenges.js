@@ -1,10 +1,7 @@
 // Desafio 1
-function compareTrue() {
+function compareTrue(primeiro,segundo) {
   // seu código aqui
-  let segundoProjeto = true;
-  let aprovado = true;
-
-  if (segundoProjeto == true && aprovado == true) {
+  if (primeiro== true && segundo == true) {
     return true;
   }
   else {
@@ -13,10 +10,8 @@ function compareTrue() {
 }
 
 // Desafio 2
-function calcArea() {
-  // seu código aqui
-  let base = 10; 
-  let height = 50;
+function calcArea(base, height) {
+  // seu código aqui 
   let area; 
   
   area = (base * height) / 2; 
@@ -24,18 +19,16 @@ function calcArea() {
 }
 
 // Desafio 3
-function splitSentence() {
+function splitSentence(phrase) {
   // seu código aqui referencia: https://blog.betrybe.com/javascript/javascript-split/
-  let phrase = 'go Trybe';
   let split = phrase.split(' ');
 
   return split;
 }
 
 // Desafio 4
-function concatName() {
+function concatName(array) {
   // seu código aqui
-  let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
   let ultimaPosicao = array.length-1;
   let concatenar = array[ultimaPosicao] +", "+ array[0];
 
@@ -43,7 +36,7 @@ function concatName() {
 }
 
 // Desafio 5
-function footballPoints() {
+function footballPoints(wins, ties) {
   // seu código aqui
   let wins = 14;
   let ties = 8;
@@ -53,9 +46,8 @@ function footballPoints() {
 }
 
 // Desafio 6
-function highestCount() {
+function highestCount(comp) {
   // seu código aqui, referencia: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
-  let comp = [0, 0, 0];
   let max = 0;
   let cont = 0;
 
@@ -73,8 +65,26 @@ function highestCount() {
 }
 
 // Desafio 7
-function catAndMouse() {
+function catAndMouse( mouse, cat1, cat2) {
   // seu código aqui
+  let dist1 = cat1 - mouse;
+  let dist2 = cat2 - mouse;
+
+  if (dist1<0){
+    dist1 = dist1*(-1);
+  }
+  else if (dist2<0){
+    dist2 = dist2*(-1);
+  }
+  else if (dist1 == dist2) {
+    return "os gatos trombam e o rato foge";
+  }
+  else if ( dist1 < dist2){
+    return 'cat1'
+  }
+  else{
+    return 'cat2'
+  }
 }
 
 // Desafio 8
