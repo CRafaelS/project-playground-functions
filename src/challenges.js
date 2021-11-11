@@ -63,7 +63,7 @@ function highestCount(comp) {
 }
 
 // Desafio 7
-function catAndMouse( mouse, cat1, cat2) {
+function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dist1 = cat1 - mouse;
   let dist2 = cat2 - mouse;
@@ -107,8 +107,30 @@ function fizzBuzz(number) {
 }
 
 // Desafio 9
-function encode() {
+function encode(param) {
   // seu código aqui
+  let cod = []
+  for(let i = 0; i < param.length; i += 1){
+    if(param[i] == 'a'){
+      cod.push = 1;
+    }
+    else if(param[i] == 'e'){
+      cod.push = 2;
+    }
+    else if(param[i] == 'i'){
+      cod.push = 3;
+    }
+    else if(param[i] == 'o'){
+      cod.push = 4;
+    }
+    else if(param[i] == 'u'){
+      cod.push = 5;
+    }
+    else{
+      cod = param [i];
+    }
+    return cod;
+  }
 }
 function decode() {
   // seu código aqui
