@@ -26,6 +26,10 @@ function calcArea() {
 // Desafio 3
 function splitSentence() {
   // seu código aqui
+  let phrase = 'go Trybe';
+  let split = phrase.split(' ');
+
+  return split;
 }
 
 // Desafio 4
