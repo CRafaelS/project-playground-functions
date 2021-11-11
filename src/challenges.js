@@ -1,7 +1,15 @@
 // Desafio 1
 function compareTrue() {
   // seu código aqui
-  
+  let segundoProjeto = true;
+  let aprovado = true;
+
+  if (segundoProjeto == true && aprovado == true) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 2
