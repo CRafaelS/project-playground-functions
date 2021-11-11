@@ -51,7 +51,8 @@ function highestCount(contMaior) {
     if(contMaior[i]>max) {
       max = contMaior[i];
     }
-
+  }
+  for( let i = 0; i < contMaior.length; i += 1) {
     if(contMaior[i] === max) {
       cont += 1;
     }
@@ -64,18 +65,16 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dist1 = cat1 - mouse;
   let dist2 = cat2 - mouse;
-
   if (dist1 < 0) {
     dist1 = dist1*(-1);
   }
   else if (dist2<0) {
     dist2 = dist2*(-1);
   }
-
   if (dist1 == dist2) {
     return "os gatos trombam e o rato foge";
   }
-  else if ( dist1 < dist2){
+  else if ( dist1 < dist2) {
     return 'cat1';
   }
   else{
@@ -86,6 +85,7 @@ function catAndMouse(mouse, cat1, cat2) {
 // Desafio 8
 function fizzBuzz(number) {
   // seu código aqui
+
   let resultado = [];
   for ( let i=0; i<number.length; i +=1){
     if(number[i]%3==0 && number[i]%5 != 0){
