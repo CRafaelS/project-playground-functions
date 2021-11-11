@@ -25,7 +25,7 @@ function calcArea() {
 
 // Desafio 3
 function splitSentence() {
-  // seu código aqui
+  // seu código aqui referencia: https://blog.betrybe.com/javascript/javascript-split/
   let phrase = 'go Trybe';
   let split = phrase.split(' ');
 
@@ -35,6 +35,11 @@ function splitSentence() {
 // Desafio 4
 function concatName() {
   // seu código aqui
+  let array = ['Lucas', 'Cassiano', 'Ferraz', 'Paolillo'];
+  let ultimaPosicao = array.length-1;
+  let concatenar = array[ultimaPosicao] +", "+ array[0];
+
+  return concatenar;
 }
 
 // Desafio 5
