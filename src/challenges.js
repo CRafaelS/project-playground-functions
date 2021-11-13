@@ -45,7 +45,6 @@ function footballPoints(wins, ties) {
 // Desafio 6
 function highestCount(contMaior) {
   // seu código aqui, referencia: https://pt.stackoverflow.com/questions/35202/como-saber-o-maior-valor-de-um-array
-  let contMaior = [-2, -2, -1]
   let max = contMaior[0];
   let cont = 0;
   for( let i = 0; i < contMaior.length; i += 1) {
@@ -58,7 +57,6 @@ function highestCount(contMaior) {
       cont += 1;
     }
   }
-  console.log(cont)
   return cont;
 }
 
@@ -67,6 +65,7 @@ function catAndMouse(mouse, cat1, cat2) {
   // seu código aqui
   let dist1 = cat1 - mouse;
   let dist2 = cat2 - mouse;
+  let mensagem;
   if (dist1 < 0) {
     dist1 = dist1*(-1);
   }
@@ -74,23 +73,23 @@ function catAndMouse(mouse, cat1, cat2) {
     dist2 = dist2*(-1);
   }
   if (dist1 == dist2) {
-    return "os gatos trombam e o rato foge";
+    mensagem = "os gatos trombam e o rato foge";
   }
   else if ( dist1 < dist2) {
-    return 'cat1';
+    mensagem = 'cat1';
   }
   else{
-    return 'cat2';
+    mensagem = 'cat2';
   }
+  return mensagem;
 }
 
 // Desafio 8
 function fizzBuzz(number) {
   // seu código aqui
-
   let resultado = [];
-  for ( let i=0; i<number.length; i +=1){
-    if(number[i]%3 === 0 && number[i]%5 !== 0){
+  for ( let i = 0; i<number.length; i +=1){
+    if(number[i] % 3 === 0 && number[i] % 5 !== 0){
       resultado.push("fizz");
     }
     else if(number[i]%3!== 0 && number[i]%5 === 0){
@@ -99,8 +98,8 @@ function fizzBuzz(number) {
     else if(number[i]%3 === 0 && number[i]%5 === 0){
       resultado.push("fizzBuzz");
     }
-    else if(number[i]%3 !== 0 && number[i]%5 !== 0){
-      resultado.push("bug");
+    else {
+      resultado.push("bug!");
     }
   }
   return resultado;
