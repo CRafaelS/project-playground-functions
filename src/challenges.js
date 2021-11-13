@@ -112,23 +112,23 @@ function encode(param) {
   let criptog = "";
   for(let i = 0; i < param.length; i += 1){
     if(param[i] == 'a'){
-      cod[i] = 1;
+      cod[i] = '1';
     }
     else if(param[i] == 'e'){
-      cod[i] = 2;
+      cod[i] = '2';
     }
     else if(param[i] == 'i'){
-      cod[i] = 3;
+      cod[i] = '3';
     }
     else if(param[i] == 'o'){
-      cod[i] = 4;
+      cod[i] = '4';
     }
     else if(param[i] == 'u'){
-      cod[i] = 5;
+      cod[i] = '5';
     }
   }
   for (let i = 0; i <cod.length; i += 1){
-    crip = crip + cod[i];
+    criptog = criptog + cod[i];
   }
   return criptog ;
 }
@@ -138,19 +138,19 @@ function decode(password) {
   let resp = password.split("");
   let decript="";
   for(let i = 0; i < password.length; i += 1){
-    if(password[i] === 1){
+    if(password[i] === "1"){
       resp[i] = 'a';
     }
-    else if(password[i] === 2){
+    else if(password[i] === "2"){
       resp[i] = 'e';
     }
-    else if(password[i] === 3){
+    else if(password[i] === "3"){
       resp[i] = 'i';
     }
-    else if(password[i] === 4){
+    else if(password[i] === "4"){
       resp[i] = 'o';
     }
-    else if(password[i] == 5){
+    else if(password[i] == "5"){
       resp[i] = 'u';
     }
   }
