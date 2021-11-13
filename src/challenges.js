@@ -107,54 +107,57 @@ function fizzBuzz(number) {
 
 // Desafio 9
 function encode(param) {
-  // seu código aqui
-  let cod = []
+  // seu código aqui referência: https://blog.betrybe.com/javascript/javascript-split/
+  let cod = param.split("");
+  let criptog = "";
   for(let i = 0; i < param.length; i += 1){
     if(param[i] == 'a'){
-      cod.push = 1;
+      cod[i] = 1;
     }
     else if(param[i] == 'e'){
-      cod.push = 2;
+      cod[i] = 2;
     }
     else if(param[i] == 'i'){
-      cod.push = 3;
+      cod[i] = 3;
     }
     else if(param[i] == 'o'){
-      cod.push = 4;
+      cod[i] = 4;
     }
     else if(param[i] == 'u'){
-      cod.push = 5;
-    }
-    else{
-      cod.push(param[i]);
+      cod[i] = 5;
     }
   }
-  return cod;
+  for (let i = 0; i <cod.length; i += 1){
+    crip = crip + cod[i];
+  }
+  return criptog ;
 }
+
 function decode(password) {
   // seu código aqui
-  let resp = []
+  let resp = password.split("");
+  let decript="";
   for(let i = 0; i < password.length; i += 1){
-    if(password[i] == 1){
-      resp.push = 'a';
+    if(password[i] === 1){
+      resp[i] = 'a';
     }
-    else if(password[i] == 2){
-      resp.push = 'e';
+    else if(password[i] === 2){
+      resp[i] = 'e';
     }
-    else if(password[i] == 3){
-      resp.push = 'i';
+    else if(password[i] === 3){
+      resp[i] = 'i';
     }
-    else if(password[i] == 4){
-      resp.push = 'o';
+    else if(password[i] === 4){
+      resp[i] = 'o';
     }
     else if(password[i] == 5){
-      resp.push = 'u';
-    }
-    else{
-      resp.push(password[i]);
+      resp[i] = 'u';
     }
   }
-  return resp;
+  for (let i = 0; i <resp.length; i += 1){
+    decript = decript + resp[i];
+  }
+  return decript;
 }
 
 module.exports = {
