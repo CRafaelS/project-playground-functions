@@ -16,7 +16,24 @@ function techList(tech, name) {
 
 // Desafio 11
 function generatePhoneNumber(phone) {
-  // seu código aqui
+  // seu código aqui referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice
+  let phone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1];
+  let cont = 0;
+  let number = 0;
+  if (phone.length !== 11){
+    return "Array com tamanho incorreto.";
+  }
+  for (let i = 0; i<phone.length; i += 1) {
+    if (phone [i] === phone [i - 1]) {
+      cont += 1;
+    }
+    else if (phone[i] < 0 || phone[i] >9 || cont >= 3) {
+      return "não é possível gerar um número de telefone com esses valores";
+    }
+    number = "(" + phone[0] + phone[1] + ")" + phone.slice(2,6) + "-" + phone.slice(7);
+  }
+  console.log(number);
+  return number;
 }
 
 // Desafio 12
