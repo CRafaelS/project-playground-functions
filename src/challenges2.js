@@ -1,16 +1,16 @@
 // Desafio 10
 function techList(tech, name) {
   // seu código aqui
-  let array = [];
+  let arrayVazio = [];
   if (tech.length === 0) {
     return "Vazio!";
   }
   else {
     for (let i = 0; i < tech.length; i += 1){
       tech.sort();
-      array.push ({tech: tech[i], name})
+      arrayVazio.push ({tech: tech[i], name})
     }
-    return array;
+    return arrayVazio;
   }
 }
 
@@ -37,7 +37,13 @@ function generatePhoneNumber(phone) {
 
 // Desafio 12
 function triangleCheck(lineA, lineB, lineC) {
-  // seu código aqui
+  // seu código aqui 
+  if (lineA < (lineB + lineC) && lineA > Math.abs(lineB - lineC) ) {
+    return true;
+  }
+  else {
+    return false;
+  }
 }
 
 // Desafio 13
