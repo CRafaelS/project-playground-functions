@@ -18,10 +18,8 @@ function techList(tech, name) {
 function generatePhoneNumber(phone) {
   // seu código aqui referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice 
   // e https://www.horadecodar.com.br/2021/08/24/como-remover-texto-de-string-em-javascript/
-  let phone = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0, 1]
   let cont = 0;
   let number = 0;
-  let telefone;
   if (phone.length !== 11){
     return "Array com tamanho incorreto.";
   }
@@ -34,7 +32,6 @@ function generatePhoneNumber(phone) {
     }
     number = "(" + phone[0] + phone[1] + ")"+ " " + phone.slice(2,6) + "-" + phone.slice(7);
   }
-  console.log(number.replaceAll(','))
   return number.replaceAll (',', '');
 }
 
