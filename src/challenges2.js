@@ -48,7 +48,21 @@ function triangleCheck(lineA, lineB, lineC) {
 
 // Desafio 13
 function hydrate(bebidas) {
-  // seu código aqui
+  // seu código aqui https://stackoverflow.com/questions/1623221/how-to-find-a-number-in-a-string-using-javascript
+  bebidas = "1 cachaça, 5 cervejas e 1 copo de vinho"
+  let num = bebidas.match(/\d+/g).map(Number);
+  let sum = 0;
+  for ( let i = 0; i < num.length; i += 1){
+    sum = sum + num[i];
+  }
+  if (sum === 0) {
+    return "Você não bebeu nenhuma bebiada alcoolica mas é sempre bom hidratar-se"
+  } else if ( sum === 1){
+    return sum + "copo de água";
+  }
+  else{
+    return sum + "copos de água";
+  }
 }
 
 module.exports = {
