@@ -56,7 +56,7 @@ function hydrate(bebidas) {
     sum = sum + num[i];
   }
   if (sum === 0) {
-    return "Você não bebeu nenhuma bebiada alcoolica mas é sempre bom hidratar-se"
+    return "Você não bebeu nenhuma bebida alcoólica, mas é sempre bom hidratar-se"
   } else if ( sum === 1){
     return sum + "copo de água";
   }
