@@ -18,21 +18,26 @@ function techList(tech, name) {
 function generatePhoneNumber(phone) {
   // seu código aqui referência https://developer.mozilla.org/pt-BR/docs/Web/JavaScript/Reference/Global_Objects/String/slice 
   // e https://www.horadecodar.com.br/2021/08/24/como-remover-texto-de-string-em-javascript/
-  let cont = 0;
   let number = 0;
   if (phone.length !== 11){
     return "Array com tamanho incorreto.";
   }
   for (let i = 0; i<phone.length; i += 1) {
-    if (phone [i] === phone [i - 1]) {
+    let cont = 0;
+    for (let k = 1; k < phone.length; k += 1) {
+    if (phone[i] == phone[k]) {
       cont += 1;
     }
-    else if (phone[i] < 0 || phone[i] >9 || cont >= 3) {
+    if (phone[i] < 0 || phone[i] > 9 || cont >= 3)  {
       return "não é possível gerar um número de telefone com esses valores";
     }
-    number = "(" + phone[0] + phone[1] + ")"+ " " + phone.slice(2,6) + "-" + phone.slice(7);
+    number = "(" + phone[0] + phone[1] + ")"+ " " + phone.slice(2,7) + "-" + phone.slice(7);
+    }
   }
-  return number.replaceAll (',', '');
+  for (let j = 0; j < 7; j += 1) {
+  number = number.replace(',', '');
+  }
+  return number;
 }
 
 // Desafio 12
